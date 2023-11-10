@@ -2,13 +2,11 @@ const params = new URLSearchParams(window.location.search);
 const productId = params.get("productId");
 
 const URL = productId
-  ? "https://striveschool-api.herokuapp.com/api/product/" + productId
-  : "https://striveschool-api.herokuapp.com/api/product/";
+  ? "https://striveschool-api.herokuapp.com/api/product" + productId
+  : "https://striveschool-api.herokuapp.com/api/product";
 const method = productId ? "PUT" : "POST";
 
 const handleSubmit = (event) => {
-  event.prevendtDefault();
-
   const productObj = {
     name: document.getElementById("name-input").value,
     description: document.getElementById("description-input").value,
@@ -45,6 +43,5 @@ const handleSubmit = (event) => {
 };
 const saveProduct = document.getElementById("submit-btn");
 saveProduct.addEventListener("click", () => {
-  document.prevendtDefault();
   handleSubmit();
 });
