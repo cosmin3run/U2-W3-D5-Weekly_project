@@ -1,5 +1,6 @@
 const params = new URLSearchParams(widnow.location.search);
 const productId = params.get("productId");
+console.log(productId);
 
 widnow.onload = () => {
   const container = document.getElementById("container");
@@ -27,7 +28,7 @@ widnow.onload = () => {
       button.className = "btn btn-primary";
       button.type = "button";
       button.innerText = "Modifica prodotto";
-      button.href = "https://striveschool-api.herokuapp.com/api/product" + appointmentId;
+      button.href = "./details.html?productId=" + appointmentId;
       //   APPEND
       divCardBody.appendChild(h5);
       divCardBody.appendChild(p);
