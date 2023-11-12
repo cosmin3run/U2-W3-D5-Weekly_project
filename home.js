@@ -1,6 +1,6 @@
-const cardDiv = document.getElementById("card-div");
+window.onload = () => {
+  const cardDiv = document.getElementById("card-div");
 
-const fetchData = () => {
   fetch("https://striveschool-api.herokuapp.com/api/product", {
     method: "get",
     headers: {

@@ -39,6 +39,7 @@
       </div>
     </nav>
     <main class="container row justify-content-center">
+      <h1 class="col-8" id="title">Aggiungi prodotto</h1>
       <form class="col-7 mt-3">
         <div class="mb-3">
           <label for="name-input" class="form-label">Product</label>
@@ -60,7 +61,8 @@
           <label for="price-input" class="form-label">Price</label>
           <input type="number" class="form-control" id="price-input" min="0" required />
         </div>
-        <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
+        <button type="submit" class="btn btn-primary" id="submit-btn">Aggiungi</button>
+        <button type="button" class="btn btn-primary d-none" id="delete-btn">Cancella</button>
       </form>
     </main>
     <script
